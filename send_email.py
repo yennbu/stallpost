@@ -17,7 +17,7 @@ SMTP_PORT = 587                            # Standard för säker SSL-anslutning
 
 # 2. MOTTAGARE OCH MEDDELANDE
 receiver = os.environ["RECEIVER_EMAIL"]
-last_farrier_visit = input("När var hovslagaren ute senast? (ÅÅÅÅ-MM-DD): ")
+# last_farrier_visit = input("När var hovslagaren ute senast? (ÅÅÅÅ-MM-DD): ")
 
 msg = EmailMessage()
 msg['Subject'] = 'Hästarna vill ha pedikyr, dags att boka hovis!'
@@ -30,7 +30,6 @@ msg.set_content(f'''Hej stallgänget!
 Det här är en automatisk påminnelse från vårt stallskript. 
 
 Det är dags att boka hovis för hästarna. 
-Hovslagaren var ute senast den {last_farrier_visit}.
                 
 Hälsningar,
 Elsa, Indra, Simbi & Bibbi''')
