@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 1. DINA INSTÄLLNINGAR
-MY_EMAIL = os.environ["MY_EMAIL"]
+MY_EMAIL = os.environ["GMAIL_USER"]
 APP_PASSWORD = os.environ["GMAIL_APP_PASSWORD"].replace(" ", "")
 if len(APP_PASSWORD) != 16:
     raise ValueError(
@@ -16,7 +16,7 @@ SMTP_SERVER = "smtp.gmail.com"          # Använd smtp.office365.com för Outloo
 SMTP_PORT = 587                            # Standard för säker SSL-anslutning
 
 # 2. MOTTAGARE OCH MEDDELANDE
-receiver = os.environ["RECEIVER_EMAIL"]
+receiver = os.environ["RECIPIENT_EMAIL"]
 # last_farrier_visit = input("När var hovslagaren ute senast? (ÅÅÅÅ-MM-DD): ")
 
 msg = EmailMessage()
