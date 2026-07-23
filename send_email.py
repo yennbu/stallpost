@@ -20,14 +20,14 @@ receiver = os.environ["RECIPIENT_EMAIL"]
 # last_farrier_visit = input("När var hovslagaren ute senast? (ÅÅÅÅ-MM-DD): ")
 
 msg = EmailMessage()
-msg['Subject'] = 'Hästarna vill ha pedikyr, dags att boka hovis!'
+msg['Subject'] = 'Boka hovis: Hästarna vill ha pedikyr!'
 msg['From'] = f'Hästarna <{MY_EMAIL}>'
 msg['To'] = receiver
 
 # Skriv ditt meddelande här
-msg.set_content(f'''Hej stallgänget!
+msg.set_content(f'''Hej!
 
-Det här är en automatisk påminnelse från vårt stallskript. 
+Det här är en automatisk påminnelse från vår stallmail. 
 
 Det är dags att boka hovis för hästarna. 
                 
