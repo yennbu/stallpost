@@ -1,5 +1,6 @@
 import os
 import smtplib
+import ssl
 from email.message import EmailMessage
 from dotenv import load_dotenv
 
@@ -36,11 +37,11 @@ Elsa, Indra, Simbi & Bibbi''')
 
 # 3. SKICKA MEJLET
 try:
-    # Vi använder vanliga SMTP istället för SMTP_SSL för port 587
-    with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as smtp:
-        smtp.ehlo()          # Identifiera dig mot servern
-        smtp.starttls()      # Kryptera anslutningen säkert
-        smtp.ehlo()
+    # Skapa ett SSL-context med säkra standardinställningar
+    context = ssl.create_default_context()
+
+    # Använd SMTP_SSL istället för SMTP
+    with smtplib.SMTP_SSL(SMTP_SERVER, 465, context=context) as smtp:
         smtp.login(MY_EMAIL, APP_PASSWORD)
         smtp.send_message(msg)
     print("Stallmejlet skickades utan problem!")
