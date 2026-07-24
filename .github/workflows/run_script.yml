@@ -2,7 +2,7 @@ name: Run email script
 
 on:
   schedule:
-    - cron: '0 9 24 * *'    
+    - cron: '0 16 24 * *'    
   workflow_dispatch:
 
 jobs:
