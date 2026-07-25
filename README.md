@@ -1,6 +1,6 @@
 # Automatiserade mailutskick för stallet
 
-Python-skript som automatiserar månatliga mailutskick via Gmail för att påminna om att till exempel boka tid för hovslagare. Projektet körs helt serverlöst i molnet med hjälp av GitHub Actions.
+Python-skript som automatiserar månatliga mailutskick via Gmail för att påminna om att till exempel boka tid för hovslagare. Projektet körs serverlöst i molnet med hjälp av GitHub Actions.
 
 ## Funktioner
 * **Automatiserad drift:** Schemalagd att köras automatiskt en gång i månaden via GitHub Actions (Cron-jobb).
