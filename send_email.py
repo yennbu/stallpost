@@ -38,7 +38,7 @@ emails_to_send = []
 if send_vaccine_email:
     emails_to_send.append({
         'subject': 'Vaccination: Påminnelse från hästarna',
-        'content': 'Hej! \n\nDet här är en automatisk påminnelse från vår stallmejl. \n\nDet är dags att kolla upp hästarnas vaccinationer. \n\nHälsningar,\nElsa, Indra, Simbi och Bibbi'
+        'content': 'Hej! \n\nDet här är en automatisk påminnelse från våra hästar. \n\nDet är dags att kolla upp hästarnas vaccinationer. \n\nHälsningar,\nElsa, Indra, Simbi och Bibbi'
     })
 
 if send_dentist_email:
